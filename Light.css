@@ -18,7 +18,7 @@ body{
 .container p{
     border-radius:30px ;
     padding: 30px;
-    background: linear-gradient(to right, pink, lightblue,yellow,lightgreen);
+    background: radial-gradient(pink, lightblue,yellow,lightgreen);
     height: 100px;
     width: 70px;
     font-size: 70px;
