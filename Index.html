@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Light.css">
+</head>
+<body>
+
+
+    <div class="container">
+        <p id="h">00</p>
+        <p id="m">00</p>
+        <p id="s">00</p>
+        <p id="ampm">AM</p>
+    </div>
+
+
+
+
+
+
+    <script>
+
+       setInterval(()=>{
+        let hour = document.getElementById('h')
+       let min = document.getElementById('m')
+       let second = document.getElementById('s')
+       let ampm = document.getElementById('ampm')
+
+       let h = new Date().getHours()
+       let s = new Date().getSeconds()
+       let m = new Date().getMinutes()
+
+
+       let am = h >= 12 ? "PM" : "AM"
+            // convert 24hr clock to 12hr
+
+            if (h > 12) {
+                h = h - 12
+            }
+
+            // add zero before single digit number
+
+            h = (h < 10) ? "0" + h : h
+            m = (m < 10) ? "0" + m : m
+            s = (s < 10) ? "0" + s : s
+
+       hour.innerHTML = h
+       min.innerHTML = m
+       second.innerHTML = s
+       ampm.innerHTML = am
+       })
+    
+    
+    
+    </script>
+</body>
+</html>
